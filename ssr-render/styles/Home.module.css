@@ -1,0 +1,37 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #54a0ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.container h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bottom {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #f5f6fa;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
