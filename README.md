@@ -6,15 +6,15 @@
 Installation:
 git clone https://github.com/xff-123/Next.js-Egg.js-React-JWT-Authentication.git
 
-启动server层
-cd ssr-server
-npm install
-npm run dev
+启动server层  
+cd ssr-server  
+npm install  
+npm run dev  
 
-启动render层
-cd ssr-render
-npm install
-npm run dev
+启动render层  
+cd ssr-render  
+npm install  
+npm run dev  
 
 
 
