@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import type { NextPage } from 'next'
 import { useRouter  } from 'next/router'
 import { getCookie } from '../utils/getCookie'
-import styles from '../styles/Home.module.css'
 
 
 const Home: NextPage = () => {

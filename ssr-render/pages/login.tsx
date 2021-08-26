@@ -5,12 +5,13 @@ import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import { setCookie } from '../utils/setCookie'
+import baseUrl from '../constant/url'
 
 const Login: NextPage = () => {
   const router = useRouter()
   const onFinish = async (values: any) => {
     const { username, password } = values
-    const res = await fetch('http://localhost:7001/api/login', {
+    const res = await fetch(`${baseUrl}/api/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',

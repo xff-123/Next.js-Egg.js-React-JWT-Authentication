@@ -6,6 +6,7 @@ import { GetServerSideProps } from 'next'
 import { InferGetServerSidePropsType } from 'next'
 import {getCookie} from '../utils/getCookie'
 import { delCookie } from '../utils/delCookie';
+import baseUrl from '../constant/url'
 
 const formItemLayout = {
   labelCol: {
@@ -42,7 +43,7 @@ const Detail = ({ posts }: InferGetServerSidePropsType<typeof getServerSideProps
   const onFinish = async (values: any) => {
     // console.log('Received values of form: ', values)
     const { old_password, new_password } = values
-    const res = await fetch('http://localhost:7001/api/change', {
+    const res = await fetch(`${baseUrl}/api/change`, {
       method: 'POST',
       headers: {
         'Authorization': getCookie(document.cookie).jwt,
@@ -143,7 +144,7 @@ const Detail = ({ posts }: InferGetServerSidePropsType<typeof getServerSideProps
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const token = getCookie(req.headers?.cookie).jwt || null
-  const res = await fetch('http://localhost:7001/api/detail', {
+  const res = await fetch(`${baseUrl}/api/detail`, {
     method: 'GET',
     headers : {
       'Authorization': token

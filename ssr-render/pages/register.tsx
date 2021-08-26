@@ -3,6 +3,8 @@ import { Form, Input, Button } from 'antd'
 import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import Router from 'next/router'
+import baseUrl from '../constant/url'
+
 
 const formItemLayout = {
   labelCol: {
@@ -18,7 +20,7 @@ const formItemLayout = {
 const Register: NextPage = () => {
   const onFinish = async (values: any) => {
     const { email, password, nickname } = values
-    const res = await fetch('http://localhost:7001/api/register', {
+    const res = await fetch(`${baseUrl}/api/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8'
